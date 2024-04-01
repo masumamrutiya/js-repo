@@ -1,0 +1,157 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* body{
+        background-image: linear-gradient(red 45deg, green 20deg);
+        } */
+          .container {
+        max-width: 400px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #131c4d;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      h2{
+        text-align: center;
+        font-size: 35px;
+        color: rgb(220, 227, 237);
+      }
+      .fd{
+        margin: 17px;
+        margin-bottom: 20px;
+         } 
+
+         label{
+            display: block;
+            font-size: 23px;
+            font-weight: 15;
+            color: whitesmoke;
+         }
+         input{
+            width: 100%;
+        padding: 8px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+        margin-top: 10px;
+         }
+         
+      
+    </style>
+</head>
+    
+<body>
+    <div class="container">
+        <h2><ins>login form</ins></h2>
+    <form id="myform">
+       
+
+        <div class="fd">
+            <label>email:</label>
+            <input type="email" name="" id="email" placeholder="Enter your email">
+        </div>
+
+       
+
+        <div class="fd">
+            <label>password:</label>
+            <input type="password" name="" id="password" placeholder="Enter your password">
+        </div>
+
+
+        <div class="formb">
+            <input type="button" value="submit">
+        </div>
+    </form>
+    </div>
+    
+</body>
+
+</html>
+<script>
+    let form=document.getElementById("myform")
+    let email=document.getElementById("email")
+    let password=document.getElementById("password")
+
+    let lsdata1=JSON.parse(localStorage.getItem("kush"))
+    //   console.log(lsdata1) 
+    form.addEventListener("submit",function(e){
+        e.preventDefault()
+        let em=email.value ;
+        let pas=password.value ;
+        if(lsdata1.email==em && lsdata1.password==pas){
+            window.location.href="index.html"
+        }else{
+            alert("wrong data 😑")
+        }
+    })
+</script> -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        .form {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .one {
+            width: 250px;
+            background-color: lightblue;
+            border: 2px solid black;
+            text-align: center;
+        }
+
+        #btn {
+            padding: 10px;
+            width: auto;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="" class="form">
+        <span>Email : </span><input type="email" placeholder="Enter Your Email" class="one" id="email"><br><br>
+
+        <span>Password : </span><input type="password" placeholder="Enter Your Password" class="one"
+            id="password"><br><br>
+
+        <button id="btn">Submit ✅</button>
+    </form>
+</body>
+
+</html>
+<script>
+    let b = document.getElementById("email");
+    let c = document.getElementById("password");
+    let btn = document.getElementById("btn");
+    let final = JSON.parse(localStorage.getItem("one"));
+
+    btn.addEventListener("click", abc)
+
+    function abc(e) {
+        e.preventDefault();
+        let em = b.value;
+        let ps = c.value;
+        if (final.email == em && final.password == ps) {
+            window.location.href = "index.html"
+        }
+        else {
+            alert("Wrong Data 😒")
+        }
+    }
+</script>

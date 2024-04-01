@@ -1,0 +1,255 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* body{
+        background-image: linear-gradient(red 45deg, green 20deg);
+        } */
+          .container {
+        max-width: 400px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #5c7220;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      h2{
+        text-align: center;
+        font-size: 35px;
+        color: rgb(33, 3, 85);
+      }
+      .fd{
+        margin: 17px;
+        margin-bottom: 20px;
+         } 
+
+         label{
+            display: block;
+            font-size: 23px;
+            font-weight: 15;
+         }
+         input{
+            width: 100%;
+        padding: 8px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+        margin-top: 10px;
+         }
+         
+      
+    </style>
+</head>
+    
+<body>
+    <div class="container">
+        <h2><ins>sign-up form</ins></h2>
+    <form id="myform">
+        <div class="fd">
+            <label>name:</label>
+            <input type="name" name="" id="name" placeholder="Enter your name">
+        </div>
+
+        <div class="fd">
+            <label>email:</label>
+            <input type="email" name="" id="email" placeholder="Enter your email">
+        </div>
+
+        <div class="fd">
+            <label>phonenumber:</label>
+            <input type="phone" name="" id="phone" placeholder="Enter your number">
+        </div>
+
+        <div class="fd">
+            <label>password:</label>
+            <input type="password" name="" id="password" placeholder="Enter your password">
+        </div>
+
+
+        <div class="formb">
+            <input type="submit" >
+        </div>
+    </form>
+   
+    </div>
+
+</body>
+
+</html>
+<script>
+    let form=document.getElementById("myform")
+    let name=document.getElementById("name")
+    let email=document.getElementById("email")
+    let phone=document.getElementById("phone")
+    let password=document.getElementById("password")
+
+    form.addEventListener("submit",function(e){
+        e.preventDefault()
+     if(name.value==""){
+        alert("please enter the name")
+     }else if (email.value==""){
+        alert("please enter the email")
+     }else if(phone.value==""){
+        alert("enter the phone number")
+     }else if(password.value==""){
+        alert("please enter the password")
+     }else{
+        let obj={
+            name:name.value,
+            email:email.value,
+            phone:phone.value,
+            password:password.value,
+        }
+        localStorage.setItem("kush",JSON.stringify(obj))
+        window.location.href="login.html"
+     }
+    })
+</script> -->
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <style>
+        form {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .one {
+            width: 250px;
+        }
+
+        .three {
+            padding: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        <label for="name">Name :</label>
+        <input type="name" id="name" class="one"><br><br>
+        <label for="email">Email :</label>
+        <input type="email" id="email" class="one"><br><br>
+        <label for="password">Password :</label>
+        <input type="password" id="password" class="one"><br><br>
+        <button id="btn" class="three">Submit✅</button>
+    </form>
+</body>
+
+</html>
+<script>
+    let a = document.getElementById("name");
+    let b = document.getElementById("email");
+    let c = document.getElementById("password");
+    let d = document.getElementById("btn");
+    d.addEventListener("click", abc);
+    function abc(e) {
+        e.preventDefault();
+        if (a.value == "") {
+            alert("Fill the Name");
+        }
+        else if (b.value == "") {
+            alert("Fill the Email");
+        }
+        else if (c.value == "") {
+            alert("Fill the Password");
+        }
+        else {
+            let obj = {
+                name: a.value,
+                email: b.value,
+                password: c.value,
+            }
+            localStorage.setItem("one", JSON.stringify(obj));
+            window.location.href = "login.html";
+        }
+    }
+</script> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup</title>
+    <style>
+        .form {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .one {
+            width: 250px;
+            background-color: lightblue;
+            border: 2px solid black;
+            text-align: center;
+        }
+
+        #btn {
+            padding: 10px;
+            width: auto;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="" class="form">
+
+        <span>Name : </span><input type="name" placeholder="Enter Your Name" class="one" id="name"><br><br>
+
+        <span>Email : </span><input type="email" placeholder="Enter Your Email" class="one" id="email"><br><br>
+
+        <span>Password : </span><input type="password" placeholder="Enter Your Password" class="one"
+            id="password"><br><br>
+
+        <button id="btn">Submit ✅</button>
+    </form>
+</body>
+
+</html>
+<script>
+    let a = document.getElementById("name");
+    let b = document.getElementById("email");
+    let c = document.getElementById("password");
+    let btn = document.getElementById("btn");
+    btn.addEventListener("click", abc);
+    let arr = [];
+    function abc(e) {
+        e.preventDefault();
+        if (a.value == "") {
+            alert("Fill the Name");
+        }
+        else if (b.value == "") {
+            alert("Fill the Email");
+        }
+        else if (c.value == "") {
+            alert("Fill the Password");
+        }
+        else {
+            let obj = {
+                name: a.value,
+                email: b.value,
+                password: c.value,
+            }
+            arr.push(obj);
+            localStorage.setItem("one",JSON.stringify(arr));
+            window.location.href="login.html";
+        }
+    }
+</script>
